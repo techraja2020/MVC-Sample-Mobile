@@ -12,6 +12,7 @@
     <title>Mobile</title>
 </head>
 <body>
+    @Html.Partial("logo")
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
@@ -28,25 +29,26 @@
             </th>
             <th> @Html.DisplayNameFor(model => model.Discount)</th>
         </tr>
-    
-    @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ModelNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Brand)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Discount)
-        </td>
 
-    </tr>
-    }
-    
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModelNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discount)
+                </td>
+
+            </tr>
+        }
+
     </table>
 </body>
 </html>

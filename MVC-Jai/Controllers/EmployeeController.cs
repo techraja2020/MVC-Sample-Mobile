@@ -19,12 +19,29 @@ namespace MVC_Jai.Controllers
             eModel.Add(e1);
             eModel.Add(e2);
             eModel.Add(e3);
-
+            ViewBag.MyName = "Raja Mohamed";
             return View(eModel);
         }
         [HttpGet]
+        public ActionResult viewBagTempDataSample()
+        {
+            ViewBag.MyName = "Raja Mohamed";
+            ViewData["MyName"] = "Raja M";
+            TempData["MyName"] = "Jai";
+            return View();
+        }
+        [HttpPost]
+        public ActionResult viewBagTempDataSample(string ss)
+        {
+          // var a= ViewData["MyName"];
+           // var b=TempData["MyName"];
+            return RedirectToAction("MobilesShop");
+        }
+            [HttpGet]
         public ActionResult MobilesShop()
         {
+            var a = ViewData["MyName"];
+            var b = TempData["MyName"];
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Data Source=DESKTOP-V9D6J83;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;database=ArjunShop";
             try

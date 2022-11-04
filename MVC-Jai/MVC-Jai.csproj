@@ -134,6 +134,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\logo.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -169,6 +170,8 @@
     <Content Include="Views\Employee\Mobile.cshtml" />
     <Content Include="Views\Employee\MobilesShop.cshtml" />
     <Content Include="Views\Employee\MobilesShopPost.cshtml" />
+    <Content Include="Views\Employee\viewBagTempDataSample.cshtml" />
+    <Content Include="Views\Shared\Logo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

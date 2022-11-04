@@ -2,7 +2,6 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 
 <html>
@@ -11,23 +10,25 @@
     <title>MobilesShop</title>
 </head>
 <body>
-    <div>
-        Welcome to my mobile shop<br />
-        Brand names:<br />
-        @foreach (var item in Model)
-        {
-            <font color="Red"> @item.Brand</font><br />
-        }
-        <br />
-        Model Names :<br />
-        @foreach (var item in Model)
-        {
-            <font color="Green"> @item.ModelNumber</font><br />
-        }
+    @Html.Partial("logo")
+
+<div>
+    Welcome to my mobile shop<br />
+    Brand names:<br />
+    @foreach (var item in Model)
+    {
+        <font color="Red"> @item.Brand</font><br />
+    }
+    <br />
+    Model Names :<br />
+    @foreach (var item in Model)
+    {
+        <font color="Green"> @item.ModelNumber</font><br />
+    }
 
 
-        
 
-    </div>
+
+</div>
 </body>
 </html>

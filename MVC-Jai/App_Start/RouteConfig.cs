@@ -16,7 +16,7 @@ namespace MVC_Jai
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Employee", action = "MobilesShopPost", id = UrlParameter.Optional }
+                defaults: new { controller = "Employee", action = "viewBagTempDataSample", id = UrlParameter.Optional }
             );
         }
     }
