@@ -1,0 +1,24 @@
+﻿@model MVC_Jai.Models.Mobile
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MobilesShopPost</title>
+</head>
+<body>
+    <div> 
+        <form method="post">
+            @Html.LabelFor(x => x.ModelNumber) :@Html.TextBoxFor(x => x.ModelNumber)<br />
+            @Html.LabelFor(x => x.Price):@Html.TextBoxFor(x => x.Price)<br />
+            @Html.LabelFor(x => x.Brand):@Html.TextBoxFor(x => x.Brand)<br />
+            @Html.LabelFor(x => x.Discount):@Html.TextBoxFor(x => x.Discount)
+            <input type="submit" value="Save"/>
+        </form>
+    </div>
+</body>
+</html>
