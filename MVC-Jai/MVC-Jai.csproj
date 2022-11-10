@@ -117,6 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\ActionFilter.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -172,6 +173,7 @@
     <Content Include="Views\Employee\MobilesShopPost.cshtml" />
     <Content Include="Views\Employee\viewBagTempDataSample.cshtml" />
     <Content Include="Views\Shared\Logo.cshtml" />
+    <Content Include="Views\Employee\EmployeeAct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

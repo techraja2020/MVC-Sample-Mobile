@@ -1,0 +1,36 @@
+﻿@model MVC_Jai.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EmployeeAct</title>
+</head>
+<body>
+    <div>
+        <font color="red">  @ViewBag.error</font>
+        @Html.ValidationSummary()
+        <form method="post">
+            @Html.DropDownListFor(
+               model => model.EmpName,
+               new SelectList(
+                      new List<Object>{
+                           new { value = "Raja" , text = "Raja"  },
+                           new { value = "Jai" , text = "Jai" },
+                           new { value = "Arjun" , text = "Arjun"}
+                        },
+                      "value",
+                      "text",
+                       Model.EmpName
+               )
+            )
+            Emp Salary:   @Html.TextBoxFor(x => x.EmpSalary)
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+</html>

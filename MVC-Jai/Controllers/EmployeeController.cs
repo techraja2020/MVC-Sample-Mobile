@@ -10,6 +10,28 @@ namespace MVC_Jai.Controllers
     public class EmployeeController : Controller
     {
         // GET: Employee
+        [HttpGet]
+        public ActionResult EmployeeAct()
+        {
+            var emp = new Employee();
+            emp.EmpName = "Arjun";
+            return View(emp);
+        }
+        [HttpPost]
+        public ActionResult EmployeeAct(Employee emp)
+        {
+            if(ModelState.IsValid)
+            {
+                //saveDB()
+            }
+            else
+            {
+                ViewBag.error = string.Join(" | ", ModelState.Values
+         .SelectMany(v => v.Errors)
+         .Select(e => e.ErrorMessage));
+            }
+            return View(emp);
+        }
         public ActionResult Index()
         {
             List<Employee> eModel = new List<Employee>();
@@ -38,6 +60,7 @@ namespace MVC_Jai.Controllers
             return RedirectToAction("MobilesShop");
         }
             [HttpGet]
+            [Authorize]
         public ActionResult MobilesShop()
         {
             var a = ViewData["MyName"];
@@ -100,8 +123,11 @@ namespace MVC_Jai.Controllers
             return RedirectToAction("MobilesShop");
         }
 
+        //[ActionFilter]
+        
         public ActionResult Mobile()
         {
+            ViewBag.title = "Raja Mohamed";
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Data Source=DESKTOP-V9D6J83;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;database=ArjunShop";
             try
